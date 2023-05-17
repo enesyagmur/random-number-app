@@ -11,15 +11,19 @@ function App() {
 
   const createRnd = () => {
     setRnd(Math.floor(Math.random() * (max - min + 1) + min));
-    console.log(rnd);
   };
 
   return (
-    <div className="App">
-      <div className="container">
+    <div className="App pt-5">
+      <div className="container mt-5 bg-warning p-5 border rounded-5 d-flex flex-column align-items-center">
         <Random rnd={rnd} />
         <Input setMin={setMin} setMax={setMax} />
-        <button onClick={createRnd}>Get random number</button>
+        <button
+          onClick={createRnd}
+          className="bg-success border border-success p-2 text-light rounded-1 mt-2 pointer-cursor"
+        >
+          Get random number
+        </button>
       </div>
     </div>
   );
